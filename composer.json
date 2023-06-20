@@ -1,0 +1,21 @@
+{
+    "name": "targetbay/bayrewards",
+    "description": "A simple composer package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Prasanth",
+            "email": "prasanth.s@targetbay.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "BayRewards\\HelloWorld\\": "src/"
+        }
+    },
+    "require": {
+        "sammyjo20/saloon": "^2.0"
+    }
+}
