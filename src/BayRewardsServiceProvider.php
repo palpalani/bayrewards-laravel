@@ -2,9 +2,9 @@
 
 namespace Palpalani\BayRewards;
 
+use Palpalani\BayRewards\Commands\BayRewardsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Palpalani\BayRewards\Commands\BayRewardsCommand;
 
 class BayRewardsServiceProvider extends PackageServiceProvider
 {
@@ -16,8 +16,8 @@ class BayRewardsServiceProvider extends PackageServiceProvider
         $package
             ->name('bayrewards-laravel')
             ->hasConfigFile();
-            // ->hasViews()
-            // ->hasMigration('create_bayrewards-laravel_table')
-            // ->hasCommand(BayRewardsCommand::class);
+        // ->hasViews()
+        // ->hasMigration('create_bayrewards-laravel_table')
+        // ->hasCommand(BayRewardsCommand::class);
     }
 }
