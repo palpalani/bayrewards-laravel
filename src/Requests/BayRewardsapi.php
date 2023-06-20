@@ -4,24 +4,20 @@ declare(strict_types=1);
 
 namespace BayRewardsapi;
 
-use Generator;
-use Saloon\Http\Connector;
-use Saloon\Contracts\Request;
 use BayRewardsapi\Responses\BayRewardsapiResponse;
+use Generator;
+use Saloon\Contracts\Request;
+use Saloon\Http\Connector;
 
 class BayRewardsapi extends Connector
 {
     /**
      * Define the custom response
-     *
-     * @var string
      */
     protected string $response = BayRewardsapiResponse::class;
 
     /**
      * Resolve the base URL of the service.
-     *
-     * @return string
      */
     public function resolveBaseUrl(): string
     {
@@ -44,9 +40,6 @@ class BayRewardsapi extends Connector
     /**
      * Iterate over a paginated request
      *
-     * @param \Saloon\Contracts\Request $request
-     * @param bool $asResponse
-     * @return \Generator
      * @throws \ReflectionException
      * @throws \Saloon\Exceptions\InvalidResponseClassException
      * @throws \Saloon\Exceptions\PendingRequestException
