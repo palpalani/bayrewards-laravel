@@ -11,13 +11,11 @@ class BayRewardsServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
+         * This class is a BayRewards Service Provider
          */
         $package
             ->name('bayrewards-laravel')
-            ->hasConfigFile()/
+            ->hasConfigFile();
             // ->hasViews()
             // ->hasMigration('create_bayrewards-laravel_table')
             // ->hasCommand(BayRewardsCommand::class);

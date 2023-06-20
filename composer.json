@@ -12,7 +12,8 @@
     "authors": [
         {
             "name": "Prasanth",
-            "email": "prasanth.s@targetbay.com"
+            "email": "prasanth.s@targetbay.com",
+            "role": "Developer"
         },
         {
             "name": "palPalani",
