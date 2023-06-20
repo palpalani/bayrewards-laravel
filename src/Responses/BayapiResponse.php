@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Bayapi\Responses;
+namespace BayRewardsapi\Responses;
 
 use Saloon\Http\Responses\Response;
 
-class BayapiResponse extends Response
+class BayRewardsapiResponse extends Response
 {
     //
 }

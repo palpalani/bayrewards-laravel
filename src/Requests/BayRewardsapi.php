@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Bayapi;
+namespace BayRewardsapi;
 
 use Generator;
 use Saloon\Http\Connector;
 use Saloon\Contracts\Request;
-use Bayapi\Responses\BayapiResponse;
+use BayRewardsapi\Responses\BayRewardsapiResponse;
 
-class Batapi extends Connector
+class BayRewardsapi extends Connector
 {
     /**
      * Define the custom response
      *
      * @var string
      */
-    protected string $response = BayapiResponse::class;
+    protected string $response = BayRewardsapiResponse::class;
 
     /**
      * Resolve the base URL of the service.
