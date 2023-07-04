@@ -2,9 +2,9 @@
 
 namespace Palpalani\BayRewards\Objects;
 
+use Palpalani\BayRewards\Contracts\DataTransferObject;
 use Saloon\Contracts\DataObjects\WithResponse;
 use Saloon\Traits\Responses\HasResponse;
-use Palpalani\BayRewards\Contracts\DataTransferObject;
 
 /**
  * @phpstan-type ActionData array{success: bool|null, code: int|null, locale: string|null, message: string|null, data: array|null}

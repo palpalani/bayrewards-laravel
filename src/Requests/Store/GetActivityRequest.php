@@ -2,12 +2,12 @@
 
 namespace Palpalani\BayRewards\Requests\Store;
 
+use Palpalani\BayRewards\Objects\Action;
+use Palpalani\BayRewards\Responses\Store\GetActionResponse;
 use Saloon\Contracts\Response;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
-use Palpalani\BayRewards\Objects\Action;
-use Palpalani\BayRewards\Responses\Store\GetActionResponse;
 
 final class GetActivityRequest extends Request
 {
