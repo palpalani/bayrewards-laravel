@@ -2,7 +2,6 @@
 
 namespace TargetBay\BayRewards\Requests\Store;
 
-use TargetBay\BayRewards\Objects\Store;
 use Saloon\Contracts\Response;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
@@ -34,7 +33,7 @@ final class GetActivityRequest extends Request
         return [
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
-            'Store-Access-Token' =>  $this->access_token
+            'Store-Access-Token' => $this->access_token,
         ];
     }
 
