@@ -3,10 +3,10 @@
 namespace TargetBay\BayRewards;
 
 use Saloon\Http\Connector;
-use TargetBay\BayRewards\Resources\StoreResource;
-use TargetBay\BayRewards\Resources\CreateActivityResource;
 use TargetBay\BayRewards\Resources\ActivityResource;
+use TargetBay\BayRewards\Resources\CreateActivityResource;
 use TargetBay\BayRewards\Resources\PointsResource;
+use TargetBay\BayRewards\Resources\StoreResource;
 
 final class Factory extends Connector
 {

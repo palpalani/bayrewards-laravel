@@ -2,12 +2,12 @@
 
 namespace TargetBay\BayRewards\Requests\Store;
 
-use TargetBay\BayRewards\Objects\Store;
-use TargetBay\BayRewards\Responses\Store\GetStoreResponse;
 use Saloon\Contracts\Response;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
+use TargetBay\BayRewards\Objects\Store;
+use TargetBay\BayRewards\Responses\Store\GetStoreResponse;
 
 final class GetStoreRequest extends Request
 {
@@ -25,7 +25,7 @@ final class GetStoreRequest extends Request
      */
     public function resolveEndpoint(): string
     {
-        return "/account";
+        return '/account';
     }
 
     protected function defaultHeaders(): array
@@ -33,7 +33,7 @@ final class GetStoreRequest extends Request
         return [
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
-            'Store-Access-Token' =>  $this->access_token
+            'Store-Access-Token' => $this->access_token,
         ];
     }
 

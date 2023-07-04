@@ -3,20 +3,19 @@
 namespace TargetBay\BayRewards\Requests\Store;
 
 use Saloon\Contracts\Body\HasBody;
-use TargetBay\BayRewards\Responses\Store\GetActionResponse;
 use Saloon\Contracts\Response;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
 use TargetBay\BayRewards\Objects\Action;
+use TargetBay\BayRewards\Responses\Store\GetActionResponse;
 
 final class CreateActivityRequest extends Request implements HasBody
 {
     use AlwaysThrowOnErrors;
-
     use HasJsonBody;
-    
+
     protected Method $method = Method::POST;
 
     public function __construct(protected string $access_token, protected array $data = [])
@@ -28,7 +27,7 @@ final class CreateActivityRequest extends Request implements HasBody
      */
     public function resolveEndpoint(): string
     {
-        return "/action/store";
+        return '/action/store';
     }
 
     protected function defaultHeaders(): array
@@ -36,9 +35,10 @@ final class CreateActivityRequest extends Request implements HasBody
         return [
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
-            'Store-Access-Token' =>  $this->access_token
+            'Store-Access-Token' => $this->access_token,
         ];
     }
+
     public function defaultBody(): array
     {
         return $this->data;
