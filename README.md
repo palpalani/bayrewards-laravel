@@ -14,14 +14,6 @@ You can install the package via composer:
 ```bash
 composer require palpalani/bayrewards-laravel
 ```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="bayrewards-laravel-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -43,10 +35,36 @@ php artisan vendor:publish --tag="bayrewards-laravel-views"
 
 ## Usage
 
+Get store details, after integrate with BayRewards.io
 ```php
-$bayRewards = new Palpalani\BayRewards();
-echo $bayRewards->echoPhrase('Hello, Palpalani!');
+use Palpalani\BayRewards\BayRewards;
+
+$bayRewards = BayRewards::client();
+$store = $client->storeDetails()->get('<Store-Access-Token>');
 ```
+
+Create a new BayReward Activity
+```php
+use Palpalani\BayRewards\BayRewards;
+
+$bayRewards = BayRewards::client();
+$activity = $client->createActivity()->post('<Store-Access-Token>', [
+        "title" => "Title of the Activity name", //required
+        "icon" => "<Icon URL>" //required
+    ]);
+```
+
+Update loyalty points 
+```php
+use Palpalani\BayRewards\BayRewards;
+
+$bayRewards = BayRewards::client();
+$updatePoints = $client->updatePoints()->post('<Store-Access-Token>', [
+    "activity_id" => '<From activity payload>', //required
+    'customer_email' => '<Customer Email>', //required
+]);
+```
+
 
 ## Testing
 
