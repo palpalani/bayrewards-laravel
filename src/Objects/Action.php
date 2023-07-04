@@ -1,10 +1,10 @@
 <?php
 
-namespace TargetBay\BayRewards\Objects;
+namespace Palpalani\BayRewards\Objects;
 
 use Saloon\Contracts\DataObjects\WithResponse;
 use Saloon\Traits\Responses\HasResponse;
-use TargetBay\BayRewards\Contracts\DataTransferObject;
+use Palpalani\BayRewards\Contracts\DataTransferObject;
 
 /**
  * @phpstan-type ActionData array{success: bool|null, code: int|null, locale: string|null, message: string|null, data: array|null}

@@ -1,9 +1,9 @@
 <?php
 
-namespace TargetBay\BayRewards\Responses\Store;
+namespace Palpalani\BayRewards\Responses\Store;
 
 use Saloon\Contracts\Response;
-use TargetBay\BayRewards\Objects\Action;
+use Palpalani\BayRewards\Objects\Action;
 
 /**
  * @phpstan-import-type ActionData from Store

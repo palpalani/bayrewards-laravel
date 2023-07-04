@@ -1,6 +1,6 @@
 <?php
 
-namespace TargetBay\BayRewards\Resources;
+namespace Palpalani\BayRewards\Resources;
 
 use Saloon\Contracts\Connector;
 

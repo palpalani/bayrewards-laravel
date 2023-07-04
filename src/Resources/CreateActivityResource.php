@@ -1,9 +1,9 @@
 <?php
 
-namespace TargetBay\BayRewards\Resources;
+namespace Palpalani\BayRewards\Resources;
 
-use TargetBay\BayRewards\Objects\CreateActivity;
-use TargetBay\BayRewards\Requests\Store\CreateActivityRequest;
+use Palpalani\BayRewards\Objects\CreateActivity;
+use Palpalani\BayRewards\Requests\Store\CreateActivityRequest;
 
 final class CreateActivityResource extends Resource
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace TargetBay\BayRewards\Resources;
+namespace Palpalani\BayRewards\Resources;
 
-use TargetBay\BayRewards\Objects\ActionData;
-use TargetBay\BayRewards\Requests\Store\UpdatePointsRequest;
+use Palpalani\BayRewards\Objects\ActionData;
+use Palpalani\BayRewards\Requests\Store\UpdatePointsRequest;
 
 final class PointsResource extends Resource
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace TargetBay\BayRewards\Requests\Store;
+namespace Palpalani\BayRewards\Requests\Store;
 
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Contracts\Response;
@@ -8,8 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
-use TargetBay\BayRewards\Objects\Action;
-use TargetBay\BayRewards\Responses\Store\GetActionResponse;
+use Palpalani\BayRewards\Objects\Action;
+use Palpalani\BayRewards\Responses\Store\GetActionResponse;
 
 final class UpdatePointsRequest extends Request implements HasBody
 {
