@@ -1,6 +1,6 @@
 <?php
 
-namespace TargetBay\BayRewards\Contracts;
+namespace Palpalani\BayRewards\Contracts;
 
 /**
  * @template T of array
