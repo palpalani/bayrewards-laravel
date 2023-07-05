@@ -27,12 +27,6 @@ return [
 ];
 ```
 
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="bayrewards-laravel-views"
-```
-
 ## Usage
 
 Get store details, after integrate with BayRewards.io
