@@ -17,7 +17,7 @@ final class Factory extends Connector
      */
     public function resolveBaseUrl(): string
     {
-        return "http://app.polar.localhost/api/{$this->apiVersion}";
+        return "https://data.bayrewards.io/api/{$this->apiVersion}";
     }
 
     public function withApiVersion(string $apiVersion): self
