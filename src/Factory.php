@@ -17,7 +17,10 @@ final class Factory extends Connector
      */
     public function resolveBaseUrl(): string
     {
-        return "https://data.bayrewards.io/api/{$this->apiVersion}";
+        if(config('bayrewards-laravel.app_server') == 'production') {
+            return "https://data.bayrewards.io/api/{$this->apiVersion}";
+        } 
+        return "https://data.feb14.net:8003/api/{$this->apiVersion}";
     }
 
     public function withApiVersion(string $apiVersion): self
