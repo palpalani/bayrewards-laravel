@@ -2,5 +2,5 @@
 
 // config for Palpalani/BayRewards
 return [
-    "app_server" => env('APP_SERVER', 'production')
+    "bayrewards_base_url" => env('BAYREWARDS_BASE_URL)', 'https://data.bayrewards.io')
 ];
