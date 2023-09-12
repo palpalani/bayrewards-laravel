@@ -24,6 +24,7 @@ This is the contents of the published config file:
 
 ```php
 return [
+        'bayrewards_base_url' => env('BAYREWARDS_BASE_URL', 'https://data.bayrewards.io')
 ];
 ```
 
@@ -42,7 +43,7 @@ Create a new BayReward Activity
 use Palpalani\BayRewards\BayRewards;
 
 $bayRewards = BayRewards::client();
-$activity = $client->createActivity()->post('<Store-Access-Token>', [
+$activity = $bayRewards->createActivity()->post('<Store-Access-Token>', [
         "title" => "Title of the Activity name", //required
         "icon" => "<Icon URL>" //required
     ]);
@@ -53,10 +54,24 @@ Update loyalty points
 use Palpalani\BayRewards\BayRewards;
 
 $bayRewards = BayRewards::client();
-$updatePoints = $client->updatePoints()->post('<Store-Access-Token>', [
+$updatePoints = $bayRewards->updatePoints()->post('<Store-Access-Token>', [
     "activity_id" => '<From activity payload>', //required
     'customer_email' => '<Customer Email>', //required
 ]);
+```
+
+Get all Customers List
+```php
+use Palpalani\BayRewards\BayRewards;
+
+$bayRewards = BayRewards::client();
+$store = $bayRewards->allCustomers()->get(
+'<Store-Access-Token>, //required  
+0, //optional - page , default - 1    
+0,//optional - limit , default - 25    
+0,//optional - type  , default - NaN    
+"" //optional - search'
+);
 ```
 
 
