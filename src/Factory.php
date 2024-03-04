@@ -6,8 +6,8 @@ use Palpalani\BayRewards\Resources\ActivityResource;
 use Palpalani\BayRewards\Resources\CreateActivityResource;
 use Palpalani\BayRewards\Resources\CustomerResource;
 use Palpalani\BayRewards\Resources\PointsResource;
-use Palpalani\BayRewards\Resources\StoreResource;
 use Palpalani\BayRewards\Resources\StoreFeatureResource;
+use Palpalani\BayRewards\Resources\StoreResource;
 use Saloon\Http\Connector;
 
 final class Factory extends Connector
