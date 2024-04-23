@@ -4,9 +4,9 @@ namespace Palpalani\BayRewards\Requests\Store;
 
 use Palpalani\BayRewards\Objects\Store;
 use Palpalani\BayRewards\Responses\Store\GetStoreResponse;
-use Saloon\Contracts\Response;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
+use Saloon\Http\Response;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
 
 final class GetStoreRequest extends Request
