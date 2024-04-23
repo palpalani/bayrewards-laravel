@@ -21,11 +21,11 @@ final class Store implements DataTransferObject, WithResponse
      * @param  string[]|null  $flags
      */
     public function __construct(
-        public readonly bool|null $success,
-        public readonly int|null $code,
-        public readonly string|null $locale,
-        public readonly string|null $message,
-        public readonly array|null $data,
+        public readonly ?bool $success,
+        public readonly ?int $code,
+        public readonly ?string $locale,
+        public readonly ?string $message,
+        public readonly ?array $data,
     ) {
     }
 
