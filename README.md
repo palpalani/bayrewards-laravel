@@ -30,7 +30,8 @@ return [
 
 ## Usage
 
-Get store details, after integrate with BayRewards.io
+### Get store details, after integrate with BayRewards.io
+
 ```php
 use Palpalani\BayRewards\BayRewards;
 
@@ -38,7 +39,8 @@ $bayRewards = BayRewards::client();
 $store = $client->storeDetails()->get('<Store-Access-Token>');
 ```
 
-Create a new BayReward Activity
+### Create a new BayReward Activity
+
 ```php
 use Palpalani\BayRewards\BayRewards;
 
@@ -49,7 +51,8 @@ $activity = $bayRewards->createActivity()->post('<Store-Access-Token>', [
     ]);
 ```
 
-Update loyalty points 
+### Update loyalty points 
+
 ```php
 use Palpalani\BayRewards\BayRewards;
 
@@ -60,7 +63,8 @@ $updatePoints = $bayRewards->updatePoints()->post('<Store-Access-Token>', [
 ]);
 ```
 
-Get all Customers List
+### Get all Customers List
+
 ```php
 use Palpalani\BayRewards\BayRewards;
 
