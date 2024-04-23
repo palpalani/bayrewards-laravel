@@ -7,6 +7,8 @@
 
 BayRewards PHP SDK for Laravel Framework.
 
+[BayRewards](https://bayrewards.io) revolutionizes e-commerce engagement with a comprehensive rewards platform. Seamlessly integrated with online stores, [BayRewards](https://bayrewards.io) offers point programs, referral incentives, and VIP perks to drive customer loyalty and sales. Elevate your e-commerce experience by incentivizing purchases, encouraging referrals, and rewarding VIP customers with exclusive benefits. With [BayRewards](https://bayrewards.io), businesses can effortlessly cultivate customer relationships and foster brand advocacy, leading to increased retention and revenue.
+
 ## Installation
 
 You can install the package via composer:
@@ -14,6 +16,7 @@ You can install the package via composer:
 ```bash
 composer require palpalani/bayrewards-laravel
 ```
+
 You can publish the config file with:
 
 ```bash
@@ -24,7 +27,7 @@ This is the contents of the published config file:
 
 ```php
 return [
-        'bayrewards_base_url' => env('BAYREWARDS_BASE_URL', 'https://data.bayrewards.io')
+    'bayrewards_base_url' => env('BAYREWARDS_BASE_URL')
 ];
 ```
 
