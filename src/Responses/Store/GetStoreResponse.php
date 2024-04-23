@@ -3,7 +3,7 @@
 namespace Palpalani\BayRewards\Responses\Store;
 
 use Palpalani\BayRewards\Objects\Store;
-use Saloon\Contracts\Response;
+use Saloon\Http\Response;
 
 /**
  * @phpstan-import-type StoreData from Store
