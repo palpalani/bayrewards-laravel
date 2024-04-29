@@ -25,7 +25,7 @@ final class GetActivityRequest extends Request
      */
     public function resolveEndpoint(): string
     {
-        return "/action/{$this->activity_id}";
+        return "/custom-actions/{$this->activity_id}";
     }
 
     protected function defaultHeaders(): array
