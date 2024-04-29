@@ -27,7 +27,7 @@ final class UpdatePointsRequest extends Request implements HasBody
      */
     public function resolveEndpoint(): string
     {
-        return '/action/update-points';
+        return '/custom-actions/update-points';
     }
 
     protected function defaultHeaders(): array

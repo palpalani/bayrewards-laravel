@@ -27,7 +27,7 @@ final class CreateActivityRequest extends Request implements HasBody
      */
     public function resolveEndpoint(): string
     {
-        return '/action/store';
+        return '/custom-actions/store';
     }
 
     protected function defaultHeaders(): array
