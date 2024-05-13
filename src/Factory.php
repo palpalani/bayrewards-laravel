@@ -4,6 +4,7 @@ namespace Palpalani\BayRewards;
 
 use Palpalani\BayRewards\Resources\ActivityResource;
 use Palpalani\BayRewards\Resources\CreateActivityResource;
+use Palpalani\BayRewards\Resources\updateActivityResource;
 use Palpalani\BayRewards\Resources\CustomerResource;
 use Palpalani\BayRewards\Resources\PointsResource;
 use Palpalani\BayRewards\Resources\StoreFeatureResource;
@@ -57,5 +58,10 @@ final class Factory extends Connector
     public function getStoreFeatures(): StoreFeatureResource
     {
         return new StoreFeatureResource($this);
+    }
+
+    public function updateActivity(): updateActivityResource
+    {
+        return new UpdateActivityResource($this);
     }
 }
