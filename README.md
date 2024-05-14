@@ -54,6 +54,19 @@ $activity = $bayRewards->createActivity()->post('<Store-Access-Token>', [
     ]);
 ```
 
+### Update the BayReward Activity
+
+```php
+use Palpalani\BayRewards\BayRewards;
+
+$bayRewards = BayRewards::client();
+$activity = $bayRewards->updateActivity()->post('<Store-Access-Token>', [
+        "title" => "Title of the Activity name", //required
+        "icon" => "<Icon URL>", //required
+        "activity_id" => ******* //required
+    ]);
+```
+
 ### Update loyalty points 
 
 ```php

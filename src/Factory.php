@@ -8,6 +8,7 @@ use Palpalani\BayRewards\Resources\CustomerResource;
 use Palpalani\BayRewards\Resources\PointsResource;
 use Palpalani\BayRewards\Resources\StoreFeatureResource;
 use Palpalani\BayRewards\Resources\StoreResource;
+use Palpalani\BayRewards\Resources\updateActivityResource;
 use Saloon\Http\Connector;
 
 final class Factory extends Connector
@@ -57,5 +58,10 @@ final class Factory extends Connector
     public function getStoreFeatures(): StoreFeatureResource
     {
         return new StoreFeatureResource($this);
+    }
+
+    public function updateActivity(): updateActivityResource
+    {
+        return new UpdateActivityResource($this);
     }
 }
