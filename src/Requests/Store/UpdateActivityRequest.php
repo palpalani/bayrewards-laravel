@@ -27,7 +27,7 @@ final class UpdateActivityRequest extends Request implements HasBody
      */
     public function resolveEndpoint(): string
     {
-        return '/action/store/update';
+        return '/action/update';
     }
 
     protected function defaultHeaders(): array
