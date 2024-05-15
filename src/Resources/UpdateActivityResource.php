@@ -2,13 +2,13 @@
 
 namespace Palpalani\BayRewards\Resources;
 
-use Palpalani\BayRewards\Objects\UpdateActivity;
+use Palpalani\BayRewards\Objects\Action;
 use Palpalani\BayRewards\Requests\Store\UpdateActivityRequest;
 
 final class UpdateActivityResource extends Resource
 {
     /**
-     * @return mixed|UpdateActivity
+     * @return mixed|Action
      */
     public function post(string $access_token, array $data): mixed
     {
