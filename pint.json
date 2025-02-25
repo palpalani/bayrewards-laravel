@@ -1,6 +1,8 @@
 {
     "preset": "laravel",
     "rules": {
+        "@PER-CS": true,
+        "@PHP84Migration": true,
         "simplified_null_return": true,
         "braces": false,
         "new_with_braces": {
