@@ -1,14 +1,31 @@
 {
     "name": "palpalani/bayrewards-laravel",
-    "description": "BayRewards PHP SDK for Laravel Framework.",
+    "description": "BayRewards PHP SDK for Laravel Framework - A comprehensive rewards platform integration for e-commerce stores.",
     "type": "library",
     "keywords": [
-        "palpalani",
+        "bayrewards",
+        "rewards",
+        "loyalty",
+        "points",
+        "referral",
+        "e-commerce",
         "laravel",
-        "bayrewards-laravel"
+        "laravel-package",
+        "sdk",
+        "api",
+        "palpalani"
     ],
     "homepage": "https://github.com/palpalani/bayrewards-laravel",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/palpalani/bayrewards-laravel/issues",
+        "source": "https://github.com/palpalani/bayrewards-laravel",
+        "docs": "https://github.com/palpalani/bayrewards-laravel#readme"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/palpalani/bayrewards-laravel.git"
+    },
     "authors": [
         {
             "name": "Prasanth",
@@ -21,6 +38,28 @@
             "role": "Developer"
         }
     ],
+    "require": {
+        "php": "^8.3",
+        "spatie/laravel-package-tools": "^1.15.0",
+        "illuminate/contracts": "^11.0|^12.0",
+        "saloonphp/saloon": "^3.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10.3",
+        "nunomaduro/collision": "^7.0|^8.1",
+        "larastan/larastan": "^2.6.3",
+        "orchestra/testbench": "^8.5|^9.0|^10.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-arch": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0",
+        "phpstan/extension-installer": "^1.3.1",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0"
+    },
+    "suggest": {
+        "ext-curl": "Required for making HTTP requests to the BayRewards API",
+        "ext-json": "Required for JSON encoding and decoding"
+    },
     "autoload": {
         "psr-4": {
             "Palpalani\\BayRewards\\": "src/"
@@ -31,36 +70,49 @@
             "Palpalani\\BayRewards\\Tests\\": "tests/"
         }
     },
-    "require": {
-        "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.15.0",
-        "illuminate/contracts": "^10.0|^11.0|^12.0",
-        "saloonphp/saloon": "^3.0"
-    },
-    "require-dev": {
-        "laravel/pint": "^1.10.3",
-        "nunomaduro/collision": "^7.0|^8.1",
-        "larastan/larastan": "^2.6.3",
-        "orchestra/testbench": "^8.5|^9.0|^10.0",
-        "pestphp/pest": "^2.8.2",
-        "pestphp/pest-plugin-arch": "^2.2.1",
-        "pestphp/pest-plugin-laravel": "^2.0",
-        "phpstan/extension-installer": "^1.3.1",
-        "phpstan/phpstan-deprecation-rules": "^1.1.3",
-        "phpstan/phpstan-phpunit": "^1.3.13"
-    },
     "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ],
+        "analyse": [
+            "vendor/bin/phpstan analyse"
+        ],
+        "test": [
+            "vendor/bin/pest"
+        ],
+        "test-coverage": [
+            "vendor/bin/pest --coverage"
+        ],
+        "format": [
+            "vendor/bin/pint"
+        ],
+        "format-test": [
+            "vendor/bin/pint --test"
+        ]
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true
+        },
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "platform-check": false,
+        "archive": {
+            "exclude": [
+                "/.github",
+                "/.idea",
+                "/.phpunit.cache",
+                "/tests",
+                "/phpstan-baseline.neon",
+                "/phpstan.neon.dist",
+                "/phpunit.xml.dist",
+                "/pint.json",
+                "/.gitattributes",
+                "/.gitignore",
+                "/.editorconfig"
+            ]
         }
     },
     "extra": {
