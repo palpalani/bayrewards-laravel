@@ -1,0 +1,26 @@
+# This file defines code owners for the repository
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+* @palpalani
+
+# Source code
+/src/ @palpalani
+
+# Tests
+/tests/ @palpalani
+
+# Configuration files
+/composer.json @palpalani
+/phpstan.neon.dist @palpalani
+/pint.json @palpalani
+/phpunit.xml.dist @palpalani
+
+# Documentation
+/README.md @palpalani
+/CHANGELOG.md @palpalani
+/LICENSE.md @palpalani
+
+# GitHub workflows
+/.github/ @palpalani
+
