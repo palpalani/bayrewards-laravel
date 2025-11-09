@@ -53,8 +53,8 @@
         "pestphp/pest-plugin-arch": "^4.0",
         "pestphp/pest-plugin-laravel": "^4.0",
         "phpstan/extension-installer": "^1.3.1",
-        "phpstan/phpstan-deprecation-rules": "^2.0",
-        "phpstan/phpstan-phpunit": "^2.0"
+        "phpstan/phpstan-deprecation-rules": "^1.1.3",
+        "phpstan/phpstan-phpunit": "^1.3.13"
     },
     "suggest": {
         "ext-curl": "Required for making HTTP requests to the BayRewards API",
@@ -78,7 +78,7 @@
             "vendor/bin/phpstan analyse"
         ],
         "test": [
-            "vendor/bin/pest"
+            "vendor/bin/pest --no-coverage"
         ],
         "test-coverage": [
             "vendor/bin/pest --coverage"

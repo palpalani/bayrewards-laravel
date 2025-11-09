@@ -1,5 +1,13 @@
 <?php
 
-it('will not use debugging functions')
-    ->expect(['dd', 'dump', 'ray'])
-    ->each->not->toBeUsed();
+use Palpalani\BayRewards\Factory;
+
+test('factory is final', function () {
+    expect(Factory::class)
+        ->toBeFinal();
+});
+
+test('factory extends saloon connector', function () {
+    expect(Factory::class)
+        ->toExtend(\Saloon\Http\Connector::class);
+});

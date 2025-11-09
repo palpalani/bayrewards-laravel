@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Palpalani\BayRewards;
 
 use Palpalani\BayRewards\Commands\BayRewardsCommand;
