@@ -3,6 +3,7 @@
 namespace Palpalani\BayRewards\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Foundation\Bootstrap\HandleExceptions;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Palpalani\BayRewards\BayRewardsServiceProvider;
 
@@ -44,27 +45,22 @@ class TestCase extends Orchestra
         return 'UTC';
     }
 
-    protected function resolveApplicationBootstrappers($app): array
+    protected function getBasePath(): string
     {
-        return array_values(array_filter(
-            parent::resolveApplicationBootstrappers($app) ?? [],
-            function ($bootstrapper) {
-                return ! in_array($bootstrapper, [
-                    \Illuminate\Foundation\Bootstrap\HandleExceptions::class,
-                ]);
-            }
-        ));
-    }
-
-    protected function resolveApplicationExceptionHandler($app): void
-    {
-        //
+        return __DIR__ . '/..';
     }
 
     protected function resolveApplicationCore($app): void
     {
-        parent::resolveApplicationCore($app);
-
         $app->detectEnvironment(fn() => 'testing');
+
+        // Store the original bootstrapper list
+        $bootstrappers = $app->bootstrappers();
+
+        // Remove HandleExceptions from bootstrappers
+        $app->setBootstrappers(array_values(array_filter(
+            $bootstrappers,
+            fn($bootstrapper) => $bootstrapper !== HandleExceptions::class
+        )));
     }
 }
