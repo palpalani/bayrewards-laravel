@@ -12,6 +12,10 @@ on:
       - 'composer.json'
       - 'composer.lock'
 
+concurrency:
+  group: phpstan-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 

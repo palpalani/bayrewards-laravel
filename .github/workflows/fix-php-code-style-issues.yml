@@ -8,6 +8,10 @@ on:
       - 'pint.json'
       - '.github/workflows/fix-php-code-style-issues.yml'
 
+concurrency:
+  group: fix-style-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
   pull-requests: write
