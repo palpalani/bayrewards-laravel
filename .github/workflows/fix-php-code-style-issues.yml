@@ -1,8 +1,7 @@
 name: Fix PHP Code Style Issues
 
 on:
-  push:
-    branches: [main]
+  pull_request:
     paths:
       - '**.php'
       - 'pint.json'
@@ -25,7 +24,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
         with:
-          ref: ${{ github.head_ref || github.ref }}
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -58,4 +58,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'Fix styling'
-          skip_dirty_check: true
+          branch: ${{ github.head_ref }}
