@@ -39,15 +39,16 @@ class TestCase extends Orchestra
         $app['config']->set('app.env', 'testing');
     }
 
-    protected function resolveApplicationCore($app): void
+    protected function getApplicationTimezone($app): string
     {
-        parent::resolveApplicationCore($app);
-
-        $app->detectEnvironment(fn () => 'testing');
+        return 'UTC';
     }
 
-    protected function resolveApplicationExceptionHandler($app): void
+    protected function resolveApplicationBootstrappers($app): array
     {
-        // Skip exception handler registration in tests to avoid PHPUnit error handler issues
+        return array_filter(
+            parent::resolveApplicationBootstrappers($app),
+            fn ($bootstrapper) => $bootstrapper !== \Illuminate\Foundation\Bootstrap\HandleExceptions::class
+        );
     }
 }
