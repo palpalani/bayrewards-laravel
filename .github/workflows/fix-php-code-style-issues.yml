@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.head_ref || github.ref }}
 
@@ -48,7 +48,7 @@ jobs:
         uses: ramsey/composer-install@v3
 
       - name: Fix PHP code style issues
-        uses: aglipanci/laravel-pint-action@v2.6
+        uses: aglipanci/laravel-pint-action@v2.4
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v7
