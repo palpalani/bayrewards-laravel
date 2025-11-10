@@ -34,10 +34,20 @@ class TestCase extends Orchestra
         */
     }
 
+    protected function defineEnvironment($app): void
+    {
+        $app['config']->set('app.env', 'testing');
+    }
+
     protected function resolveApplicationCore($app): void
     {
         parent::resolveApplicationCore($app);
 
         $app->detectEnvironment(fn () => 'testing');
+    }
+
+    protected function resolveApplicationExceptionHandler($app): void
+    {
+        // Skip exception handler registration in tests to avoid PHPUnit error handler issues
     }
 }
