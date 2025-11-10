@@ -17,14 +17,14 @@ class TestCase extends Orchestra
         );
     }
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             BayRewardsServiceProvider::class,
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
 
@@ -32,5 +32,12 @@ class TestCase extends Orchestra
         $migration = include __DIR__.'/../database/migrations/create_bayrewards-laravel_table.php.stub';
         $migration->up();
         */
+    }
+
+    protected function resolveApplicationCore($app): void
+    {
+        parent::resolveApplicationCore($app);
+
+        $app->detectEnvironment(fn () => 'testing');
     }
 }
