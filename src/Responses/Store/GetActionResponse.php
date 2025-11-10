@@ -6,7 +6,7 @@ use Palpalani\BayRewards\Objects\Action;
 use Saloon\Http\Response;
 
 /**
- * @phpstan-import-type ActionData from Store
+ * @phpstan-import-type ActionData from Action
  */
 final class GetActionResponse
 {
