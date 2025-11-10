@@ -15,10 +15,7 @@ final class GetStoreCustomerRequest extends Request
 
     protected Method $method = Method::GET;
 
-    public function __construct(protected string $access_token, protected int $page, protected int $limit, protected int $type, protected string $sortBy, protected string $search)
-    {
-
-    }
+    public function __construct(protected string $access_token, protected int $page, protected int $limit, protected int $type, protected string $sortBy, protected string $search) {}
 
     /**
      * {@inheritDoc}

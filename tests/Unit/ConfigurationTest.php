@@ -23,4 +23,3 @@ it('defaults bayrewards base url to null when not set', function () {
     expect(config('bayrewards-laravel.bayrewards_base_url'))
         ->toBeNull();
 });
-

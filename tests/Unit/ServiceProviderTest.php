@@ -26,4 +26,3 @@ it('loads config file correctly', function () {
         ->toBeArray()
         ->toHaveKey('bayrewards_base_url');
 });
-

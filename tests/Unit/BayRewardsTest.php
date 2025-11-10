@@ -35,4 +35,3 @@ it('returns a new factory instance each time', function () {
     expect($factory1)
         ->not->toBe($factory2);
 });
-

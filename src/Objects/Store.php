@@ -26,8 +26,7 @@ final class Store implements DataTransferObject, WithResponse
         public readonly ?string $locale,
         public readonly ?string $message,
         public readonly ?array $data,
-    ) {
-    }
+    ) {}
 
     public static function from(array $data): Store
     {

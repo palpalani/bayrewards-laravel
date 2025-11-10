@@ -15,10 +15,7 @@ final class GetStoreFeaturesRequest extends Request
 
     protected Method $method = Method::POST;
 
-    public function __construct(protected string $access_token)
-    {
-
-    }
+    public function __construct(protected string $access_token) {}
 
     /**
      * {@inheritDoc}

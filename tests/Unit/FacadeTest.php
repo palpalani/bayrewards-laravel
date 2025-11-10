@@ -25,4 +25,3 @@ it('can access client with custom api version through facade', function () {
         ->and($factory->apiVersion)
         ->toBe('v2');
 });
-

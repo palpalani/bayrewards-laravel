@@ -18,9 +18,7 @@ final class UpdatePointsRequest extends Request implements HasBody
 
     protected Method $method = Method::POST;
 
-    public function __construct(protected string $access_token, protected array $data = [])
-    {
-    }
+    public function __construct(protected string $access_token, protected array $data = []) {}
 
     /**
      * {@inheritDoc}

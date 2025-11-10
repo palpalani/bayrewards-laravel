@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Palpalani\\BayRewards\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn(string $modelName) => 'Palpalani\\BayRewards\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
@@ -50,7 +50,7 @@ class TestCase extends Orchestra
 
         return array_values(array_filter(
             $bootstrappers ?? [],
-            fn ($bootstrapper) => $bootstrapper !== \Illuminate\Foundation\Bootstrap\HandleExceptions::class
+            fn($bootstrapper) => $bootstrapper !== \Illuminate\Foundation\Bootstrap\HandleExceptions::class
         ));
     }
 }

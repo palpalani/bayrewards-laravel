@@ -14,7 +14,7 @@ beforeEach(function () {
 });
 
 it('can set api version', function () {
-    $factory = new Factory();
+    $factory = new Factory;
 
     $result = $factory->withApiVersion('v2');
 
@@ -27,7 +27,7 @@ it('can set api version', function () {
 });
 
 it('resolves base url correctly', function () {
-    $factory = new Factory();
+    $factory = new Factory;
     $factory->apiVersion = 'v1';
 
     $baseUrl = $factory->resolveBaseUrl();
@@ -37,7 +37,7 @@ it('resolves base url correctly', function () {
 });
 
 it('resolves base url with custom api version', function () {
-    $factory = new Factory();
+    $factory = new Factory;
     $factory->apiVersion = 'v2';
 
     $baseUrl = $factory->resolveBaseUrl();
@@ -47,7 +47,7 @@ it('resolves base url with custom api version', function () {
 });
 
 it('can create store details resource', function () {
-    $factory = new Factory();
+    $factory = new Factory;
 
     $resource = $factory->storeDetails();
 
@@ -56,7 +56,7 @@ it('can create store details resource', function () {
 });
 
 it('can create create activity resource', function () {
-    $factory = new Factory();
+    $factory = new Factory;
 
     $resource = $factory->createActivity();
 
@@ -65,7 +65,7 @@ it('can create create activity resource', function () {
 });
 
 it('can create get activity resource', function () {
-    $factory = new Factory();
+    $factory = new Factory;
 
     $resource = $factory->getActivity();
 
@@ -74,7 +74,7 @@ it('can create get activity resource', function () {
 });
 
 it('can create update activity resource', function () {
-    $factory = new Factory();
+    $factory = new Factory;
 
     $resource = $factory->updateActivity();
 
@@ -83,7 +83,7 @@ it('can create update activity resource', function () {
 });
 
 it('can create update points resource', function () {
-    $factory = new Factory();
+    $factory = new Factory;
 
     $resource = $factory->updatePoints();
 
@@ -92,7 +92,7 @@ it('can create update points resource', function () {
 });
 
 it('can create all customers resource', function () {
-    $factory = new Factory();
+    $factory = new Factory;
 
     $resource = $factory->allCustomers();
 
@@ -101,11 +101,10 @@ it('can create all customers resource', function () {
 });
 
 it('can create get store features resource', function () {
-    $factory = new Factory();
+    $factory = new Factory;
 
     $resource = $factory->getStoreFeatures();
 
     expect($resource)
         ->toBeInstanceOf(StoreFeatureResource::class);
 });
-
