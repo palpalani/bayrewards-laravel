@@ -52,7 +52,7 @@ jobs:
         uses: ramsey/composer-install@v3
 
       - name: Fix PHP code style issues
-        uses: aglipanci/laravel-pint-action@v2.4
+        run: ./vendor/bin/pint
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v7
