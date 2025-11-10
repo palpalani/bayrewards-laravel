@@ -50,17 +50,22 @@ class TestCase extends Orchestra
         return __DIR__ . '/..';
     }
 
-    protected function resolveApplicationCore($app): void
+    protected function resolveApplicationBootstrappers($app): array
     {
-        $app->detectEnvironment(fn() => 'testing');
+        $bootstrappers = parent::resolveApplicationBootstrappers($app);
 
-        // Store the original bootstrapper list
-        $bootstrappers = $app->bootstrappers();
+        if (is_array($bootstrappers)) {
+            return array_values(array_filter(
+                $bootstrappers,
+                fn($bootstrapper) => $bootstrapper !== HandleExceptions::class
+            ));
+        }
 
-        // Remove HandleExceptions from bootstrappers
-        $app->setBootstrappers(array_values(array_filter(
-            $bootstrappers,
-            fn($bootstrapper) => $bootstrapper !== HandleExceptions::class
-        )));
+        return [];
+    }
+
+    protected function resolveApplicationExceptionHandler($app): void
+    {
+        // Override to prevent exception handler registration
     }
 }
