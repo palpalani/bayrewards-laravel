@@ -46,9 +46,11 @@ class TestCase extends Orchestra
 
     protected function resolveApplicationBootstrappers($app): array
     {
-        return array_filter(
-            parent::resolveApplicationBootstrappers($app),
+        $bootstrappers = parent::resolveApplicationBootstrappers($app);
+
+        return array_values(array_filter(
+            $bootstrappers ?? [],
             fn ($bootstrapper) => $bootstrapper !== \Illuminate\Foundation\Bootstrap\HandleExceptions::class
-        );
+        ));
     }
 }
