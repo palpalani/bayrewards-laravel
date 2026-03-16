@@ -1,6 +1,7 @@
 <?php
 
 use Palpalani\BayRewards\Factory;
+use Saloon\Http\Connector;
 
 test('factory is final', function () {
     expect(Factory::class)
@@ -9,5 +10,5 @@ test('factory is final', function () {
 
 test('factory extends saloon connector', function () {
     expect(Factory::class)
-        ->toExtend(\Saloon\Http\Connector::class);
+        ->toExtend(Connector::class);
 });
